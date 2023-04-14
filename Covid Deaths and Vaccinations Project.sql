@@ -227,9 +227,11 @@ FROM PercentPopulationVaccinated1;
 WHERE Location = 'Finland';
 
 
+
 -- Creating VIEWS to store data for later visualization
 
 -- Global total numbers (total cases, total deaths, death rate)
+
 CREATE VIEW GlobalDeathRate AS
 SELECT SUM(new_cases) AS Cases, SUM(new_deaths) AS Deaths, SUM(new_deaths)/SUM(new_cases)*100 AS DeathRate
 FROM CovidDeaths 
